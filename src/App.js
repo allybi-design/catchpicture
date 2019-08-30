@@ -1,26 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import Imagelayer from "./components/ImageLayer";
+import Box from "./components/box";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default class App extends Component {
+  state = {
+    boxes: [0, 0, 0, 0, 0, 0, 0, 0, 0]
+  };
+
+  render() {
+    let boxes = this.state.boxes.map((box, i) => <Box key={i} id={i} />)
+
+
+    return (
+      <div className="wrapper">
+        <Imagelayer image={"./images/image1.jpg"} />
+
+        <div className="container gridLayer">
+          {boxes}
+        </div>
+      </div>
+    );
+  }
 }
-
-export default App;
