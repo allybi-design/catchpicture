@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Imagelayer from "./components/ImageLayer";
+import Imagelayer from "./components/ImageLayer.jsx";
 import Box from "./components/box";
 
 export default class App extends Component {
@@ -7,8 +7,13 @@ export default class App extends Component {
     boxes: [0, 0, 0, 0, 0, 0, 0, 0, 0]
   };
 
+  squareClicked(e) {
+    console.log(e);
+    console.log(`square clicked`);
+  }
+
   render() {
-    let boxes = this.state.boxes.map((box, i) => <Box key={i} id={i} />)
+    let boxes = this.state.boxes.map((box, i) => <Box key={i} clicked={this.squareClicked} id={i} />)
 
 
     return (
