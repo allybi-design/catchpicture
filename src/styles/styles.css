@@ -51,7 +51,7 @@
   text-transform: uppercase;
 }
 
-.wrapper .gridLayer {
+.wrapper .boxesLayer {
   width: 600px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -60,10 +60,7 @@
       flex-wrap: wrap;
 }
 
-.wrapper .gridLayer .box {
+.wrapper .boxesLayer .box {
   width: 200px;
   height: 200px;
-  -webkit-box-shadow: 0px 4px 12px #666;
-          box-shadow: 0px 4px 12px #666;
 }
-/*# sourceMappingURL=styles.css.map */
