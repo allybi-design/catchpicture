@@ -6,7 +6,7 @@ function ImageLayer(props) {
       <img src={props.image} alt="cartoon" />;
       <div className="playBox">
         <h1>Welcome to Catch-Phrase</h1>
-        <h2>Can you Guess the character???</h2>
+        <h2>Can you Guess the character?</h2>
         <p>
           You have 18 points for the max correct guess & -2 for each other guess
           you take.

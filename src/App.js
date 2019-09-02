@@ -1,31 +1,53 @@
 import React, { Component } from "react";
 import Imagelayer from "./components/ImageLayer.jsx";
-import Box from "./components/box";
+// import Box from "./components/box";
 
 export default class App extends Component {
   state = {
-    boxes: [0, 0, 0, 0, 0, 0, 0, 0, 0]
+    boxes: [
+      { value: false },
+      { value: false },
+      { value: true },
+      { value: false },
+      { value: true },
+      { value: false },
+      { value: false },
+      { value: false },
+      { value: false }
+    ]
   };
 
-  squareClicked(e) {
-    console.log(e);
-    console.log(`square clicked`);
-  }
-<<<<<<< HEAD
-=======
+  randImage = () => {
+    let num = Math.ceil(Math.random() * 20);
+    return `./images/image${num}.png`;
+  };
 
-  render() {
-    let boxes = this.state.boxes.map((box, i) => <Box key={i} clicked={this.squareClicked} id={i} />)
->>>>>>> 02dc37d25d718bc77b5df9575f9ee1441fa93d80
+  getStyle = value => {
+    return {
+      backgroundColor: value ? "transparent" : "rgba(255, 0, 0, 1)",
+      border: value ? "none" : "1px solid #000"
+    };
+  };
+
+  toggleSquare = (i) => {
+    console.log(i);
+    console.log(`square clicked`);
+    this.setState({boxes[i].value: true})
+  };
 
   render() {
     let boxes = this.state.boxes.map((box, i) => (
-      <Box key={i} clicked={this.squareClicked} id={i} />
+      <div
+        key={i}
+        className="box"
+        onClick={() => this.toggleSquare(i)}
+        style={this.getStyle(box.value)}
+      ></div>
     ));
 
     return (
       <div className="wrapper">
-        <Imagelayer image={"./images/image1.png"} />
+        <Imagelayer image={this.randImage()} />
 
         <div className="container gridLayer">{boxes}</div>
       </div>
