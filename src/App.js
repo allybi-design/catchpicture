@@ -8,11 +8,15 @@ export default class App extends Component {
     score: 18
   };
 
+  setScore = ()=> {
+    this.setState({score: this.score -2})
+  }
+
   render() {
     return (
       <div className="wrapper">
         <Imagelayer score={this.state.score}/>
-        <BoxsLayer />
+        <BoxsLayer clicked={()=> this.setScore()}/>
       </div>
     );
   }

@@ -15,20 +15,21 @@ export default class boxLayer extends Component {
   };
 
   toggleShow = (i) => {
-    console.log(`index ${i}`);
-    console.log(`square clicked`)
-    console.log(this.state.boxes[i]);
     const newBoxes = this.state.boxes.map((box, index) => {
       if (index === i) {
         box = true
       }
       return box
     })
-    console.log(newBoxes)
-    this.setState({score: this.state.score -2})
+   
     this.setState({boxes: newBoxes})
-
   };
+
+  shuffleBoxes = ()=> {
+      let square = Math.ceil(Math.random()*9)
+      console.log(square)
+  }
+
   render() {
     let boxes = this.state.boxes.map((box, i) => (
       <div
