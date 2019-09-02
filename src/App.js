@@ -7,17 +7,21 @@ export default class App extends Component {
     boxes: [0, 0, 0, 0, 0, 0, 0, 0, 0]
   };
 
-  render() {
-    let boxes = this.state.boxes.map((box, i) => <Box key={i} id={i} />)
+  squareClicked(e) {
+    console.log(e);
+    console.log(`square clicked`);
+  }
 
+  render() {
+    let boxes = this.state.boxes.map((box, i) => (
+      <Box key={i} clicked={this.squareClicked} id={i} />
+    ));
 
     return (
       <div className="wrapper">
-        <Imagelayer image={"./images/image1.jpg"} />
+        <Imagelayer image={"./images/image1.png"} />
 
-        <div className="container gridLayer">
-          {boxes}
-        </div>
+        <div className="container gridLayer">{boxes}</div>
       </div>
     );
   }
