@@ -8,16 +8,11 @@ export default class App extends Component {
     score: 18
   };
 
-
-
   render() {
-    
-
     return (
       <div className="wrapper">
         <Imagelayer score={this.state.score}/>
-
-       <BoxsLayer />
+        <BoxsLayer />
       </div>
     );
   }

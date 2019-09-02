@@ -35,7 +35,6 @@ export default class boxLayer extends Component {
         key={i}
         className="box"
         onClick={()=>this.toggleShow(i)}
-        // style={this.getStyle(box.value)}
         style={this.getStyle(box)}
       />
     ));
