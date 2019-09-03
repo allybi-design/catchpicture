@@ -6,9 +6,8 @@
 }
 
 .wrapper {
-  width: 600px;
+  width: 300px;
   margin: 1rem auto;
-  background-color: aqua;
 }
 
 .wrapper .container {
@@ -16,7 +15,7 @@
 }
 
 .wrapper .imageLayer {
-  width: 600px;
+  width: 300px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -31,28 +30,12 @@
 
 .wrapper .imageLayer img {
   width: 100%;
-  height: 600px;
+  height: 300px;
   border: 1px solid #000;
 }
 
-.wrapper .imageLayer .playBox {
-  text-align: center;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-.wrapper .imageLayer .playBox h1 {
-  font-size: 38px;
-  margin: 1rem 0;
-}
-
-.wrapper .imageLayer .playBox .btn {
-  margin: 1.5rem;
-  padding: 0.75rem 3rem;
-  text-transform: uppercase;
-}
-
 .wrapper .boxesLayer {
-  width: 600px;
+  width: 300px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -61,6 +44,24 @@
 }
 
 .wrapper .boxesLayer .box {
-  width: 200px;
-  height: 200px;
+  width: 100px;
+  height: 100px;
 }
+
+.wrapper .boxesLayer .scoreBox {
+  width: 600px;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.wrapper .boxesLayer .scoreBox h1 {
+  font-size: 38px;
+  margin: 1rem 0;
+}
+
+.wrapper .boxesLayer .scoreBox .btn {
+  margin: 0.5rem;
+  padding: 0.75rem 1rem;
+  text-transform: uppercase;
+}
+/*# sourceMappingURL=styles.css.map */
